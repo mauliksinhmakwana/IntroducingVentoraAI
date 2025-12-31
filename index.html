@@ -185,8 +185,9 @@
                 <div className="flex flex-col gap-6">
                   <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-gray-300">Legal & Support</h4>
                   <ul className="space-y-4 text-sm text-gray-500">
-                    <li><button onClick={onPrivacyClick} className="hover:text-purple-400 transition-colors text-left">Privacy & Security</button></li>
-                    <li><a href="mailto:support@ventora.ai" className="hover:text-purple-400 transition-colors">Technical Support</a></li>
+                    <li><button onClick={onPrivacyClick} className="flex items-center gap-2 hover:text-purple-400 transition-colors text-left"><i class="fas fa-lock text-sm"></i>Privacy & Security</button></li>
+                      <li><a href="privacy-policy.html" class="flex items-center gap-2 hover:text-purple-400 transition-colors text-left"><i class="fas fa-shield-alt text-sm"></i>Privacy & Security Policy</a></li>
+                    <li><a href="mailto:support@ventora.ai" className="flex items-center gap-2 hover:text-purple-400 transition-colors"><i class="fas fa-headset text-sm"></i>Technical Support</a></li>
                     <li><span className="text-[10px] tracking-widest text-gray-600 uppercase">© {new Date().getFullYear()} VENTORA LABS</span></li>
                   </ul>
                 </div>
