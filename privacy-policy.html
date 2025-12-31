@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Security Policy - Ventora AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #333; }
+
+        /* Starry Background */
+        .stars-container {
+            position: fixed; top: 0; left: 0; width: 200%; height: 200%; z-index: -2;
+            background-image: 
+                radial-gradient(1.5px 1.5px at 30px 50px, #ffffff, transparent),
+                radial-gradient(1.2px 1.2px at 80px 120px, #ffffff, transparent),
+                radial-gradient(2px 2px at 200px 80px, #ffffff, transparent);
+            background-repeat: repeat; background-size: 400px 400px;
+            animation: drift 180s linear infinite; opacity: 0.6;
+        }
+        @keyframes drift { from { transform: translate(0, 0); } to { transform: translate(-400px, -400px); } }
+
+        .nebula-glow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.12), transparent 60%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.12), transparent 60%);
+            opacity: 0.5; pointer-events: none;
+        }
+
+        /* Header - EXACT SAME as your main index.html */
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000; height: 96px;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 24px; background: rgba(0,0,0,0.7); backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .logo {
+            font-size: 1.5rem; font-weight: 900; letter-spacing: 0.3em; text-transform: uppercase;
+        }
+        .version-badge {
+            font-size: 0.65rem; background: rgba(0,122,255,0.15); padding: 6px 12px;
+            border-radius: 8px; color: #60a5fa; font-weight: 600;
+            border: 1px solid rgba(0,122,255,0.3);
+        }
+
+        /* Footer - EXACT SAME as your main site */
+        footer {
+            width: 100%; padding: 80px 24px 40px; background: #000;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px;
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        .footer-column h4 {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em;
+            color: #888; margin-bottom: 24px; font-weight: 700;
+        }
+        .footer-column ul {
+            list-style: none; padding: 0; margin: 0;
+        }
+        .footer-column li {
+            margin-bottom: 16px;
+        }
+        .footer-column a, .footer-column button {
+            color: #aaa; text-decoration: none; font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-column a:hover, .footer-column button:hover {
+            color: #60a5fa;
+        }
+        .social-links {
+            display: flex; gap: 24px; margin-top: 24px;
+        }
+        .social-links a {
+            font-size: 1.4rem; color: #aaa; transition: color 0.3s;
+        }
+        .social-links a:hover { color: white; }
+        .copyright {
+            text-align: center; margin-top: 80px; padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.7rem; color: #666; letter-spacing: 0.2em;
+        }
+
+        /* Page Animation */
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slide-in-from-right {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .animate-in {
+            animation: fade-in 0.7s ease-out forwards, slide-in-from-right 0.7s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="stars-container"></div>
+    <div class="nebula-glow"></div>
+
+    <!-- Header - IDENTICAL to your main site -->
+    <header class="w-full h-24 flex items-center justify-between px-6 md:px-12 z-50 fixed top-0 backdrop-blur-md border-b border-white/5 bg-black/40">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="text-2xl font-black tracking-[0.2em] uppercase hover:opacity-80 transition">
+          VENTORA<span class="text-blue-500">AI</span>
+        </a>
+      </div>
+      
+      <nav class="hidden md:flex items-center gap-10 text-xs font-bold tracking-widest uppercase text-gray-400">
+        <a href="index.html#features" class="hover:text-white hover:translate-y-[-1px] transition-all">Features</a>
+        <a href="index.html#about" class="hover:text-white hover:translate-y-[-1px] transition-all">About</a>
+        <div class="w-px h-4 bg-white/10 mx-2"></div>
+        <div class="px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded text-[10px] text-blue-400 tracking-widest">
+          V5.4 MIA
+        </div>
+      </nav>
+
+      <div class="md:hidden">
+         <div class="px-3 py-1 bg-white/5 border border-white/10 rounded text-[10px] tracking-widest uppercase">
+          V5.4
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 w-full pt-32 pb-20 px-6 animate-in">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12 text-center">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">
+                    Privacy <span class="text-blue-500">&amp;</span> Security Policy
+                </h1>
+                <div class="h-1 w-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto"></div>
+            </div>
+
+            <div class="space-y-12 text-gray-300 leading-relaxed">
+                <p class="text-center text-gray-500">
+                    <strong>Last Updated: December 31, 2025</strong>
+                </p>
+
+                <p class="text-lg md:text-xl">
+                    At <strong>Ventora AI</strong>, we prioritize your privacy and security. This policy explains how we handle your information in our web-based <strong>Medical Information Assistant (MIA)</strong>, designed for educational purposes.
+                </p>
+
+                <p class="text-lg md:text-xl">
+                    <strong>Ventora AI</strong> runs primarily in your browser, keeping most data local on your device. We collect no personal information unless you provide it voluntarily, and we do not require accounts or logins.
+                </p>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">1. Data Collected and Stored Locally</h2>
+                    <ul class="space-y-4 list-disc list-inside text-gray-400 text-lg ml-4">
+                        <li>All chats, conversation history, settings, attached files, prescriptions, and diet plans are stored exclusively in your browser’s <strong>localStorage</strong> or <strong>IndexedDB</strong>.</li>
+                        <li>We do not transmit this data to our servers or any third party.</li>
+                        <li>Your information stays on your device and is deleted if you clear browser data or use the “Clear All Data” feature.</li>
+                        <li>You control and own your data fully.</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">2. Data Sent to Third-Party APIs</h2>
+                    <p class="text-gray-400 text-lg">
+                        <strong>Ventora AI</strong> sends certain data temporarily to external services for functionality:
+                    </p>
+                    <ul class="space-y-4 list-disc list-inside text-gray-400 text-lg ml-4">
+                        <li><strong>Chat Responses:</strong> We forward your queries and conversation context to the Groq API (or similar LLM providers) to generate AI responses. The provider processes the data only for the response and does not store it long-term. (Groq applies zero data retention by default for inference requests.)</li>
+                        <li><strong>File Text Extraction (OCR):</strong> When you upload images or PDFs for text extraction, we use the <a href="https://ocr.space/OCRAPI" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">https://ocr.space/OCRAPI</a>. Uploaded files and extracted text are deleted immediately after processing—the service stores nothing.</li>
+                    </ul>
+                    <p class="text-gray-400 text-lg">
+                        These transmissions occur only when you initiate the feature; no background data sharing happens. We select providers with strong privacy practices that avoid storing your content.
+                    </p>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">3. No Tracking or Analytics</h2>
+                    <ul class="space-y-4 list-disc list-inside text-gray-400 text-lg ml-4">
+                        <li>We employ no cookies, tracking pixels, or third-party analytics.</li>
+                        <li>We log no IP addresses, usage patterns, or personal identifiers.</li>
+                        <li>The app functions fully offline-capable except for AI response and OCR features.</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">4. Security Measures</h2>
+                    <ul class="space-y-4 list-disc list-inside text-gray-400 text-lg ml-4">
+                        <li>All local data stays on your device, protected by your browser’s security.</li>
+                        <li>Communications with APIs use HTTPS encryption.</li>
+                        <li>As an open-source project (where applicable), community members can review the code for transparency.</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">5. Children’s Privacy</h2>
+                    <p class="text-gray-400 text-lg">
+                        <strong>Ventora AI</strong> does not target children under 13. If you are a parent and believe your child has provided information, contact us to request deletion.
+                    </p>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">6. Medical Disclaimer</h2>
+                    <p class="text-gray-400 text-lg">
+                        <strong>Ventora AI</strong> serves as an educational tool only. It does not offer medical advice, diagnoses, treatments, or prescriptions. Always consult qualified healthcare professionals for health concerns. We bear no liability for misuse or reliance on the information provided.
+                    </p>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">7. Changes to This Policy</h2>
+                    <p class="text-gray-400 text-lg">
+                        We may update this policy periodically. We will notify significant changes within the app or on our site.
+                    </p>
+                </section>
+
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">8. Contact Us</h2>
+                    <p class="text-gray-400 text-lg">
+                        For questions about this policy or your data, email: 
+                        <a href="mailto:support@ventora.ai" class="text-blue-400 hover:underline">support@ventora.ai</a>
+                    </p>
+                </section>
+
+                <p class="text-center text-gray-500 mt-20 pt-12 border-t border-white/10 text-lg">
+                    Thank you for trusting <strong>Ventora AI</strong>. We are committed to maintaining the highest privacy and security standards.<br><br>
+                    <em>Developed by Maulik Sinh Makwana</em>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer - EXACT SAME as your main site -->
+    <footer class="w-full py-20 px-6 md:px-12 z-20 border-t border-white/5 bg-black">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start footer-grid">
+        
+        <div class="flex flex-col gap-6">
+          <div class="text-2xl font-black tracking-[0.2em] uppercase">
+            VENTORA<span class="text-blue-500">AI</span>
+          </div>
+          <p class="text-gray-500 text-sm max-w-xs leading-relaxed">
+            Advancing healthcare through responsible pharmaceutical intelligence. Empowering users with clinical depth and digital clarity.
+          </p>
+          <div class="flex items-center gap-6 pt-2 social-links">
+            <a href="https://www.linkedin.com/in/mauliksinh" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-400 transition-colors text-xl">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://mauliksinhmakwana.github.io/Mauliksinh-Makwana/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors text-xl">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-purple-400 transition-colors text-xl">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 footer-column">
+          <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-gray-300">Quick Navigation</h4>
+          <ul class="space-y-4 text-sm text-gray-500">
+            <li><a href="index.html#about" class="hover:text-blue-400 transition-colors">Mission & Vision</a></li>
+            <li><a href="index.html" class="hover:text-blue-400 transition-colors">Back to Top</a></li>
+            <li><a href="https://ventora-ai.vercel.app/" class="hover:text-blue-400 transition-colors">Launch Assistant</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-6 footer-column">
+          <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-gray-300">Legal & Support</h4>
+          <ul class="space-y-4 text-sm text-gray-500">
+            <li><a href="privacy-policy.html" class="hover:text-purple-400 transition-colors">Privacy & Security</a></li>
+            <li><a href="mailto:support@ventora.ai" class="hover:text-purple-400 transition-colors">Technical Support</a></li>
+            <li><span class="text-[10px] tracking-widest text-gray-600 uppercase">© 2025 VENTORA LABS</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-20 pt-8 border-t border-white/5 text-center copyright">
+        <p class="text-[10px] tracking-[0.5em] uppercase text-gray-700 font-bold">
+          Developed by Maulik Sinh Makwana
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
